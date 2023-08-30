@@ -9,7 +9,8 @@
           <!-- Card body -->
           <div class="card-body p-6">
             <div class="mb-4">
-              <a href="{{ route('dashboard') }}"><img src="../assets/images/brand/logo/logo-primary.svg" class="mb-2" alt=""></a>
+              {{-- <a href="{{ route('dashboard') }}"><img src="../assets/images/brand/logo/logo-primary.svg" class="mb-2" alt=""></a> --}}
+              <h2 style="color: cornflowerblue">SISLAB</h2>
               <p class="mb-6">Please enter your user information.</p>
 
             </div>

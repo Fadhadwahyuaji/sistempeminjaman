@@ -17,7 +17,7 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="{{ url('/assets/css/theme.min.css') }}">
-    <title>SISLAB POLINDRA</title>
+    <title>Homepage | Dash Ui - Bootstrap 5 Admin Dashboard Template</title>
 </head>
 
 <body class="bg-light">
@@ -27,9 +27,8 @@
         <nav class="navbar-vertical navbar">
             <div class="nav-scroller">
                 <!-- Brand logo -->
-                <a class="navbar-brand" href="{{ route('dashboard') }}">
-                    <h2 style="color: cornflowerblue">SISLAB</h2>
-                    {{-- <img src="./assets/images/brand/logo/logo.svg" alt="" /> --}}
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/images/brand/logo/logo.svg" alt="" />
                 </a>
                 <!-- Navbar nav -->
                 <ul class="navbar-nav flex-column" id="sideNavbar">
@@ -52,19 +51,38 @@
                         <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
                             data-bs-target="#navPages" aria-expanded="false" aria-controls="navPages">
                             <i data-feather="layers" class="nav-icon icon-xs me-2">
-                            </i> Data Pengguna
+                            </i> Pengguna
                         </a>
 
                         <div id="navPages" class="collapse " data-bs-parent="#sideNavbar">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link " href="{{ route('mahasiswa') }}">
-                                        Data Mahasiswa
+                                    <a class="nav-link " href="{{ route('profile') }}">
+                                        Profile
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link has-arrow   " href="{{ route('admin') }}">
-                                        Data Admin
+                                    <a class="nav-link has-arrow   " href="{{ route('setting') }}">
+                                        Settings
+                                    </a>
+
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('billing') }}">
+                                        Billing
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('pricing') }}">
+                                        Pricing
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('404error') }}">
+                                        404 Error
                                     </a>
                                 </li>
                             </ul>
@@ -74,7 +92,7 @@
 
 
                     <!-- Nav item -->
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
                             data-bs-target="#navAuthentication" aria-expanded="false" aria-controls="navAuthentication">
                             <i data-feather="lock" class="nav-icon icon-xs me-2">
@@ -96,52 +114,9 @@
 
                             </ul>
                         </div>
-                    </li> --}}
-
-                    <!-- Nav item -->
-                    <li class="nav-item">
-                        {{-- <a class="nav-link has-arrow " href="./docs/accordions.html">
-                            <i data-feather="package" class="nav-icon icon-xs me-2">
-                            </i> Data Barang
-                        </a> --}}
-                        <a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse"
-                            data-bs-target="#navItem" aria-expanded="false" aria-controls="navItem">
-                            <i data-feather="package" class="nav-icon icon-xs me-2">
-                            </i> Data Barang
-                        </a>
-                        <div id="navItem" class="collapse " data-bs-parent="#sideNavbar">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ route('subbag') }}">
-                                        SUBBAG
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link has-arrow   " href="{{ route('teknik_informatika') }}">
-                                        Lab TI
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link has-arrow   " href="{{ route('teknik_mesin') }}">
-                                        Lab Mesin
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link has-arrow   " href="{{ route('tptu') }}">
-                                        Lab TPTU
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link has-arrow   " href="{{ route('keperawatan') }}">
-                                        Lab Keperawatan
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link " href="{{ route('peminjaman') }}">
+                        <a class="nav-link " href="{{ route('layouts') }}">
                             <i data-feather="sidebar" class="nav-icon icon-xs me-2">
                             </i>
                             Peminjaman
@@ -155,15 +130,23 @@
 
                     <!-- Nav item -->
                     <li class="nav-item">
-                        <a class="nav-link has-arrow " href="{{ route('pengembalian') }}">
+                        <a class="nav-link has-arrow " href="./docs/accordions.html">
+                            <i data-feather="package" class="nav-icon icon-xs me-2">
+                            </i> Data Barang
+                        </a>
+                    </li>
+
+                    <!-- Nav item -->
+                    <li class="nav-item">
+                        <a class="nav-link has-arrow " href="./docs/index.html">
                             <i data-feather="clipboard" class="nav-icon icon-xs me-2">
-                            </i> Pengembalian
+                            </i> Docs
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link has-arrow " href="{{ route('riwayat_peminjaman') }}">
+                        <a class="nav-link has-arrow " href="./docs/changelog.html">
                             <i data-feather="git-pull-request" class="nav-icon icon-xs me-2">
-                            </i> Riwayat Peminjaman
+                            </i> Changelog
                         </a>
                     </li>
 
@@ -328,7 +311,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('login') }}">
+                                        <a class="dropdown-item" href="{{ route('dashboard') }}">
                                             <i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>Sign
                                             Out
                                         </a>

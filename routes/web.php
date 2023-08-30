@@ -42,7 +42,25 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 
 
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-Route::get('/layouts', [AdminController::class, 'layouts'])->name('layouts');
+
+// pengguna
+Route::get('/data-mahasiswa', [AdminController::class, 'mahasiswa'])->name('mahasiswa');
+Route::get('/data-admin', [AdminController::class, 'admin'])->name('admin');
+
+// pengguna
+Route::get('/data-barang-subbag', [AdminController::class, 'subbag'])->name('subbag');
+Route::get('/data-barang-TI', [AdminController::class, 'TI'])->name('teknik_informatika');
+Route::get('/data-barang-TM', [AdminController::class, 'TM'])->name('teknik_mesin');
+Route::get('/data-barang-TPTU', [AdminController::class, 'TPTU'])->name('tptu');
+Route::get('/data-barang-KP', [AdminController::class, 'KP'])->name('keperawatan');
+
+// peminjaman
+Route::get('/peminjaman', [AdminController::class, 'peminjaman'])->name('peminjaman');
+// peminjaman
+Route::get('/pengembalian', [AdminController::class, 'pengembalian'])->name('pengembalian');
+// peminjaman
+Route::get('/riwayat-peminjaman', [AdminController::class, 'riwayat_peminjaman'])->name('riwayat_peminjaman');
+
 Route::get('/tables', [AdminController::class, 'tables'])->name('tables');
 Route::get('/pages/profile', [AdminController::class, 'profile'])->name('profile');
 Route::get('/pages/setting', [AdminController::class, 'setting'])->name('setting');

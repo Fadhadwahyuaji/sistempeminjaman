@@ -27,7 +27,7 @@
                         <div class="d-flex justify-content-between align-items-center
         mb-3">
                             <div>
-                                <h4 class="mb-0">Projects</h4>
+                                <h4 class="mb-0">Menunggu Persetujuan</h4>
                             </div>
                             <div class="icon-shape icon-md bg-light-primary text-primary
           rounded-2">
@@ -37,7 +37,7 @@
                         <!-- project number -->
                         <div>
                             <h1 class="fw-bold">18</h1>
-                            <p class="mb-0"><span class="text-dark me-2">2</span>Completed</p>
+                            <p class="mb-0"><span class="text-dark me-2">2</span>Disetujui</p>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <div class="d-flex justify-content-between align-items-center
         mb-3">
                             <div>
-                                <h4 class="mb-0">Active Task</h4>
+                                <h4 class="mb-0">Sedang dipinjam</h4>
                             </div>
                             <div class="icon-shape icon-md bg-light-primary text-primary
           rounded-2">
@@ -61,7 +61,7 @@
                         <!-- project number -->
                         <div>
                             <h1 class="fw-bold">132</h1>
-                            <p class="mb-0"><span class="text-dark me-2">28</span>Completed</p>
+                            <p class="mb-0"><span class="text-dark me-2">28</span>dipinjam</p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         <div class="d-flex justify-content-between align-items-center
         mb-3">
                             <div>
-                                <h4 class="mb-0">Teams</h4>
+                                <h4 class="mb-0">Pengembalian</h4>
                             </div>
                             <div class="icon-shape icon-md bg-light-primary text-primary
           rounded-2">
@@ -85,7 +85,7 @@
                         <!-- project number -->
                         <div>
                             <h1 class="fw-bold">12</h1>
-                            <p class="mb-0"><span class="text-dark me-2">1</span>Completed</p>
+                            <p class="mb-0"><span class="text-dark me-2">1</span>dikembalikan</p>
                         </div>
                     </div>
                 </div>
@@ -97,20 +97,18 @@
                     <!-- card body -->
                     <div class="card-body">
                         <!-- heading -->
-                        <div class="d-flex justify-content-between align-items-center
-        mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
-                                <h4 class="mb-0">Productivity</h4>
+                                <h4 class="mb-0">Riwayat</h4>
                             </div>
-                            <div class="icon-shape icon-md bg-light-primary text-primary
-          rounded-2">
+                            <div class="icon-shape icon-md bg-light-primary text-primary rounded-2">
                                 <i class="bi bi-bullseye fs-4"></i>
                             </div>
                         </div>
                         <!-- project number -->
                         <div>
-                            <h1 class="fw-bold">76%</h1>
-                            <p class="mb-0"><span class="text-success me-2">5%</span>Completed</p>
+                            <h1 class="fw-bold">76</h1>
+                            <p class="mb-0"><span class="text-success me-2">5</span>Histori</p>
                         </div>
                     </div>
                 </div>
