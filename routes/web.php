@@ -3,6 +3,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\DataAdminController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\TabelController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\TestInputController;
@@ -64,9 +67,26 @@ Route::get('/riwayat-peminjaman', [AdminController::class, 'riwayat_peminjaman']
 Route::get('/tables', [AdminController::class, 'tables'])->name('tables');
 Route::get('/pages/profile', [AdminController::class, 'profile'])->name('profile');
 Route::get('/pages/setting', [AdminController::class, 'setting'])->name('setting');
-Route::get('/pages/billing', [AdminController::class, 'billing'])->name('billing');
-Route::get('/pages/pricing', [AdminController::class, 'pricing'])->name('pricing');
 Route::get('/pages/404error', [AdminController::class, 'error'])->name('404error');
+
+// db admin
+Route::get('/data-admin', [DataAdminController::class, 'index'])->name("admin");
+
+// barang
+Route::get('/data-barang-subbag', [BarangController::class, 'tampil_brg_subbag'])->name("subbag");
+
+// dbmahasiswa
+Route::get('/data-mahasiswa', [MahasiswaController::class, 'tampil_mhs'])->name("mahasiswa");
+Route::post('/simpan-mahasiswa', [MahasiswaController::class, 'tambah_mhs'])->name("tambah_mhs");
+
+Route::get('/data-mhs/{id}', [MahasiswaController::class, 'data_mhs'])->name("data_mhs");
+Route::post('/update-mhs/{id}', [MahasiswaController::class, 'edit_mhs'])->name("edit_mhs");
+// Route::get('/cari_mhs/{nim_mhs}', [MahasiswaController::class, 'cari_mhs'])->name("cari_mhs");
+// Route::post('/edit-mahasiswa', [MahasiswaController::class, 'edit_mhs'])->name("edit_mhs");
+Route::get('/hapus_mhs/{id}', [MahasiswaController::class, 'hapus_mhs'])->name("hapus_mhs");
+// Route::get('/data-mahasiswa', [MahasiswaController::class, 'hapus_mhs'])->name("hapus_mhs");
+// Route::get('/hapus/{id}', ['as' => 'hapus_mhs', 'uses' => 'MahasiswaController@hapus_mhs']);
+// Route::get('/data-mahasiswa', [MahasiswaController::class, 'hapus_mhs'])->name("mahasiswa");
 
 
 // database

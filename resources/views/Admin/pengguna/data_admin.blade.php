@@ -37,14 +37,14 @@
                                     <th>Nama Lengkap</th>
                                     <th>Jabatan</th>
                                     <th>Email</th>
-                                    <th>Kata Sandi</th>
                                     <th>No Telp</th>
                                     <th>Edit/Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($data as $admin)
                                 <tr>
-                                    <td class="align-middle">2109090</td>
+                                    <td class="align-middle">{{$admin->id}}</td>
                                     <td class="align-middle">
                                         <div class="d-flex align-items-center">
                                             <div>
@@ -53,58 +53,16 @@
                                                 </div>
                                             </div>
                                             <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Fadhad Wahyu Aji</h5></div></div></td>
-                                    <td class="align-middle"><h5 class=" mb-1">KA LAB Teknik Informatika</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">halo@gmail.com</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">*****</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">081234565444</h5></td>
+                                                <h5 class=" mb-1">{{ $admin->nama }}</h5></div></div></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $admin->penanggungjawab }}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{$admin->email}}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">0{{$admin->telp}}</h5></td>
                                     <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                         <button type="button" class="btn btn-primary">Edit</button>
                                         <button type="button" class="btn btn-danger">Hapus</button>
                                       </div></td>
                                 </tr>
-
-                                <tr>
-                                    <td class="align-middle">2109090</td>
-                                    <td class="align-middle">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <div class="icon-shape icon-md border p-4 rounded-1">
-                                                    <img src="assets/images/brand/dropbox-logo.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Fadhad Wahyu Aji</h5></div></div></td>
-                                    <td class="align-middle"><h5 class=" mb-1">KA LAB Teknik Informatika</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">halo@gmail.com</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">*****</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">081234565444</h5></td>
-                                    <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <button type="button" class="btn btn-primary">Edit</button>
-                                        <button type="button" class="btn btn-danger">Hapus</button>
-                                      </div></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="align-middle">2109090</td>
-                                    <td class="align-middle">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <div class="icon-shape icon-md border p-4 rounded-1">
-                                                    <img src="assets/images/brand/dropbox-logo.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Fadhad Wahyu Aji</h5></div></div></td>
-                                    <td class="align-middle"><h5 class=" mb-1">KA LAB Teknik Informatika</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">halo@gmail.com</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">*****</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">081234565444</h5></td>
-                                    <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <button type="button" class="btn btn-primary">Edit</button>
-                                        <button type="button" class="btn btn-danger">Hapus</button>
-                                      </div></td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

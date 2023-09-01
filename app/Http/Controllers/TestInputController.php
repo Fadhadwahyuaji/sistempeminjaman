@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
 class TestInputController extends Controller
@@ -30,8 +31,8 @@ class TestInputController extends Controller
     }
 
     function get_data() {
-        //$data = Item::all();
-        $data = Item::where('condition', 'baru')->where('quantity', '>', 99)->orderBY('name')->get(); // pengkondisian
+        $data = Item::all();
+        // $data = Mahasiswa::where('condition', 'baru')->where('quantity', '>', 99)->orderBY('name')->get(); // pengkondisian
         //dd($data);
         return view('testform', compact('data'));
     }

@@ -34,7 +34,7 @@
                 <!-- Navbar nav -->
                 <ul class="navbar-nav flex-column" id="sideNavbar">
                     <li class="nav-item">
-                        <a class="nav-link has-arrow  active " href="{{ route('dashboard') }}">
+                        <a class="nav-link has-arrow active " href="{{ route('dashboard') }}">
                             <i data-feather="home" class="nav-icon icon-xs me-2"></i> Dashboard
                         </a>
 

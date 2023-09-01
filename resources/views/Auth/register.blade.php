@@ -11,15 +11,23 @@
             <div class="mb-4">
               {{-- <a href="{{ route('dashboard') }}"><img src="../assets/images/brand/logo/logo-primary.svg" class="mb-2" alt=""></a> --}}
               <h2 style="color: cornflowerblue">SISLAB</h2>
-              <p class="mb-6">Please enter your user information.</p>
+              <p class="mb-6">Silahkan Masukkan Data dengan Benar</p>
 
             </div>
             <!-- Form -->
             <form>
               <!-- Username -->
               <div class="mb-3">
-                <label for="username" class="form-label">User Name</label>
-                <input type="text" id="username" class="form-control" name="username" placeholder="User Name" required="">
+                <label for="username" class="form-label">NIM</label>
+                <input type="text" id="nim_mhs" class="form-control" name="username" placeholder="User Name" required="">
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Nama Lengkap</label>
+                <input type="text" id="nama_mhs" class="form-control" name="username" placeholder="User Name" required="">
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Jurusan</label>
+                <input type="text" id="jurusan" class="form-control" name="username" placeholder="User Name" required="">
               </div>
               <!-- Email -->
               <div class="mb-3">
@@ -28,14 +36,13 @@
               </div>
               <!-- Password -->
               <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" class="form-control" name="password" placeholder="**************" required="">
+                <label for="password" class="form-label">Kata Sandi</label>
+                <input type="password" id="katasandi" class="form-control" name="password" placeholder="**************" required="">
               </div>
               <!-- Password -->
               <div class="mb-3">
-                <label for="confirm-password" class="form-label">Confirm
-                    Password</label>
-                <input type="password" id="confirm-password" class="form-control" name="password" placeholder="**************" required="">
+                <label for="confirm-password" class="form-label">Nomor Telepon</label>
+                <input type="text" id="telp" class="form-control" name="password" placeholder="**************" required="">
               </div>
               <!-- Checkbox -->
               <div class="mb-3">
@@ -52,7 +59,7 @@
                 <!-- Button -->
                 <div class="d-grid">
                   <button type="submit" class="btn btn-primary">
-                    Create Free Account
+                    Daftar
                   </button>
                 </div>
 

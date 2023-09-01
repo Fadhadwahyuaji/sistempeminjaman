@@ -36,15 +36,17 @@
                                     <th>ID Barang</th>
                                     <th>Nama Barang</th>
                                     <th>Penanggung Jawab</th>
-                                    <th>Jenis Barang</th>
+                                    <th>Tipe</th>
                                     <th>Kondisi</th>
+                                    <th>Tersedia</th>
                                     <th>Jumlah</th>
                                     <th>Edit/Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($data as $subbag )
                                 <tr>
-                                    <td class="align-middle">1</td>
+                                    <td class="align-middle">{{ $subbag->id }}</td>
                                     <td class="align-middle">
                                         <div class="d-flex align-items-center">
                                             <div>
@@ -53,16 +55,19 @@
                                                 </div>
                                             </div>
                                             <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Proyektor</h5></div></div></td>
+                                                <h5 class=" mb-1">{{ $data->nama_brg }}</h5></div></div></td>
                                     <td class="align-middle"><h5 class=" mb-1">KA LAB Subbag</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">elektronik</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Bagus</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">10</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $data->tipe }}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $data->kondisi }}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $data->tersedia }}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $data->total }}</h5></td>
                                     <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                         <button type="button" class="btn btn-primary">Edit</button>
                                         <button type="button" class="btn btn-danger">Hapus</button>
                                       </div></td>
                                 </tr>
+                                    @endforeach
+                               
 
                                 <tr>
                                     <td class="align-middle">1</td>

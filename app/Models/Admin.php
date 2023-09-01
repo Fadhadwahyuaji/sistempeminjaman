@@ -5,14 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class Admin extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nama_barang',
-        'penanggungjawab',
-        'condition',
-        'quantity'
-    ];
+    protected $guarded = [];
 }

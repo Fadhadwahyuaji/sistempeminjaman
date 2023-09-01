@@ -13,7 +13,11 @@
                             <h3 class="mb-0  text-white">DATA MAHASISWA</h3>
                         </div>
                         <div>
-                            <a href="#" class="btn btn-white">Tambah</a>
+                            <button type="button" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Tambah</button>
+                                @component('components.mahasiswa.tambah_mahasiswa')
+                                <!-- Anda dapat menambahkan konten khusus untuk modal di sini -->
+                            @endcomponent</td>
                         </div>
                     </div>
                 </div>
@@ -33,82 +37,47 @@
                         <table class="table text-nowrap mb-0">
                             <thead class="table-light">
                                 <tr>
-                                    <th>ID Mahasiswa</th>
+                                    <th>NIM Mahasiswa</th>
+                                    <th>Foto</th>
                                     <th>Nama Mahasiswa</th>
                                     <th>Jurusan</th>
                                     <th>Email</th>
-                                    <th>Kata Sandi</th>
+                                    {{-- <th>Kata Sandi</th> --}}
                                     <th>No Telp</th>
                                     <th>Alamat</th>
                                     <th>Edit/Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($data as $mhs)
                                 <tr>
-                                    <td class="align-middle">2109090</td>
+                                    <td class="align-middle">{{ $mhs->nim_mhs }}</td>
+                                    <td class="align-middle">
+                                        <div class="icon-shape icon-md border p-4 rounded-1">
+                                            <img src="{{ asset('foto_mhs/'.$mhs->foto_profil) }}" alt="" style="width: 40px">
+                                        </div>
+                                    </td>
                                     <td class="align-middle">
                                         <div class="d-flex align-items-center">
-                                            <div>
-                                                <div class="icon-shape icon-md border p-4 rounded-1">
-                                                    <img src="assets/images/brand/dropbox-logo.svg" alt="">
-                                                </div>
-                                            </div>
                                             <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Fadhad Wahyu Aji</h5></div></div></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Teknik Informatika</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">halo@gmail.com</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">*****</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">081234565444</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Cirebon</h5></td>
+                                                <h5 class=" mb-1">{{ $mhs->nama_mhs }}</h5></div></div></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $mhs->jurusan }}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $mhs->email }}</h5></td>
+                                    {{-- <td class="align-middle"><h5 class=" mb-1">{{ $mhs->katasandi }}</h5></td> --}}
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $mhs->telp }}</h5></td>
+                                    <td class="align-middle"><h5 class=" mb-1">{{ $mhs->alamat }}</h5></td>
                                     <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <button type="button" class="btn btn-primary">Edit</button>
-                                        <button type="button" class="btn btn-danger">Hapus</button>
+                                        <div>
+                                            <a href="{{ route('data_mhs', $mhs->id)}}"><button type="button" class="btn btn-primary">Edit</button></a>
+                                            {{-- @component('components.mahasiswa.edit_mahasiswa')    
+                                            @endcomponent --}}
+                                        </div>
+                                        <div><a href="/hapus_mhs/{{ $mhs->id }}"><button type="button" class="btn btn-danger" >Hapus</button></a>
+                                        {{-- @component('components.mahasiswa.hapus_mahasiswa')    
+                                        @endcomponent</div> --}}
                                       </div></td>
                                 </tr>
-
-                                <tr>
-                                    <td class="align-middle">2109090</td>
-                                    <td class="align-middle">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <div class="icon-shape icon-md border p-4 rounded-1">
-                                                    <img src="assets/images/brand/dropbox-logo.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Fadhad Wahyu Aji</h5></div></div></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Teknik Informatika</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">halo@gmail.com</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">*****</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">081234565444</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Cirebon</h5></td>
-                                    <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <button type="button" class="btn btn-primary">Edit</button>
-                                        <button type="button" class="btn btn-danger">Hapus</button>
-                                      </div></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="align-middle">2109090</td>
-                                    <td class="align-middle">
-                                        <div class="d-flex align-items-center">
-                                            <div>
-                                                <div class="icon-shape icon-md border p-4 rounded-1">
-                                                    <img src="assets/images/brand/dropbox-logo.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="ms-3 lh-1">
-                                                <h5 class=" mb-1">Fadhad Wahyu Aji</h5></div></div></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Teknik Informatika</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">halo@gmail.com</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">*****</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">081234565444</h5></td>
-                                    <td class="align-middle"><h5 class=" mb-1">Cirebon</h5></td>
-                                    <td><div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                        <button type="button" class="btn btn-primary">Edit</button>
-                                        <button type="button" class="btn btn-danger">Hapus</button>
-                                      </div></td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
